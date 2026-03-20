@@ -75,19 +75,24 @@ type EmailsData struct {
 }
 
 type GeoData struct {
-	RegionMap map[string][]Region `json:"regionMap"`
+	RegionMap map[string]Region   `json:"regionMap"`
 	StateLgas map[string][]string `json:"stateLgas"`
 }
 
 type Region struct {
-	Language []string `json:"language"`
+	Language string   `json:"language"`
 	States   []string `json:"states"`
 }
 
 type JobsData struct {
 	Positions []string `json:"positions"`
-	Degrees   []string `json:"degrees"`
+	Degrees   []Degree `json:"degrees"`
 	Courses   []string `json:"courses"`
+}
+
+type Degree struct {
+	Code string `json:"code"`
+	Full string `json:"full"`
 }
 
 type LocationsData struct {
@@ -116,17 +121,17 @@ type PlatesData struct {
 }
 
 type SalariesData struct {
-	SalaryBands map[string][]SalaryBand `json:"salaryBands"`
+	SalaryBands map[string]SalaryBand `json:"salaryBands"`
+	Levels      []string                `json:"levels"`
 }
 
 type SalaryBand struct {
-	Min string `json:"min"`
-	Max string `json:"max"`
+	Min int `json:"min"`
+	Max int `json:"max"`
 }
 
 type TitlesData struct {
-	Male   string `json:"male"`
-	Female string `json:"female"`
+	Title map[string][]string `json:"titles"`
 }
 
 type University struct {
