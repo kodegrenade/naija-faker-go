@@ -6,34 +6,49 @@ import (
 	"log"
 )
 
+//go:embed addresses.json
 var addressesJSON []byte
 
+//go:embed banks.json
 var banksJSON []byte
 
+//go:embed companies.json
 var companiesJSON []byte
 
+//go:embed emails.json
 var emailsJSON []byte
 
+//go:embed geo.json
 var geoJSON []byte
 
-var jobJSON []byte
+//go:embed jobs.json
+var jobsJSON []byte
 
-var locationJSON []byte
+//go:embed locations.json
+var locationsJSON []byte
 
+//go:embed medical.json
 var medicalJSON []byte
 
+//go:embed names.json
 var namesJSON []byte
 
+//go:embed numbers.json
 var numbersJSON []byte
 
+//go:embed plates.json
 var platesJSON []byte
 
+//go:embed salaries.json
 var salariesJSON []byte
 
+//go:embed titles.json
 var titlesJSON []byte
 
+//go:embed universities.json
 var universitiesJSON []byte
 
+//go:embed vehicles.json
 var vehiclesJSON []byte
 
 type AddressesData struct {
@@ -75,7 +90,7 @@ type JobsData struct {
 	Courses   []string `json:"courses"`
 }
 
-type LocationData struct {
+type LocationsData struct {
 	States []string `json:"states"`
 	Lgas   []string `json:"lgas"`
 }
@@ -142,7 +157,7 @@ var (
 	Emails       EmailsData
 	Geo          GeoData
 	Jobs         JobsData
-	Location     LocationData
+	Locations    LocationsData
 	Medical      MedicalData
 	Names        NamesData
 	Numbers      NumbersData
@@ -159,8 +174,8 @@ func init() {
 	mustUnmarshal(companiesJSON, &Companies, "companies.json")
 	mustUnmarshal(emailsJSON, &Emails, "emails.json")
 	mustUnmarshal(geoJSON, &Geo, "geo.json")
-	mustUnmarshal(jobJSON, &Jobs, "jobs.json")
-	mustUnmarshal(locationJSON, &Location, "locations.json")
+	mustUnmarshal(jobsJSON, &Jobs, "jobs.json")
+	mustUnmarshal(locationsJSON, &Locations, "locations.json")
 	mustUnmarshal(medicalJSON, &Medical, "medical.json")
 	mustUnmarshal(namesJSON, &Names, "names.json")
 	mustUnmarshal(numbersJSON, &Numbers, "numbers.json")
