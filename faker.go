@@ -18,6 +18,9 @@ type Config struct {
 	Network  string
 }
 
+var languages = []string{"yoruba", "igbo", "hausa"}
+var genders = []string{"male", "female"}
+
 func New() *Faker {
 	return &Faker{
 		rng: rand.New(rand.NewSource(time.Now().UnixNano())),
@@ -52,4 +55,24 @@ func (f *Faker) random(n int) int {
 // pick returns a random element from a string slice
 func (f *Faker) pick(slice []string) string {
 	return slice[f.random(len(slice))]
+}
+
+func (f *Faker) resolveLanguage(lang string) string {
+	if lang != "" {
+		return lang
+	}
+	if f.language != "" {
+		return f.language
+	}
+	return f.pick(languages)
+}
+
+func (f *Faker) resolveGender(gender string) string {
+	if gender != "" {
+		return gender
+	}
+	if f.gender != "" {
+		return f.gender
+	}
+	return f.pick(genders)
 }
