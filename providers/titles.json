@@ -1,0 +1,35 @@
+{
+  "male": [
+    "Mr.",
+    "Master",
+    "Prof.",
+    "Dr.",
+    "Engr.",
+    "Chief",
+    "Alhaji",
+    "Hon.",
+    "Barr.",
+    "Pastor",
+    "Otunba",
+    "Oloye",
+    "Igwe",
+    "Oba",
+    "Emir",
+    "Rev.",
+    "Sen."
+  ],
+  "female": [
+    "Mrs.",
+    "Ms.",
+    "Prof.",
+    "Dr.",
+    "Engr.",
+    "Chief",
+    "Alhaja",
+    "Sen.",
+    "Hon.",
+    "Barr.",
+    "Pastor",
+    "Deaconess"
+  ]
+}
