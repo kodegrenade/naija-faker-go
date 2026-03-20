@@ -1,4 +1,4 @@
-package naijafakergo
+package errors
 
 import "fmt"
 
@@ -24,6 +24,6 @@ func (e *NaijaFakerError) Error() string {
 	return fmt.Sprintf("[%s] %s", e.Code, e.Message)
 }
 
-func newError(code ErrorCode, message string) *NaijaFakerError {
+func New(code ErrorCode, message string) *NaijaFakerError {
 	return &NaijaFakerError{Code: code, Message: message}
 }
