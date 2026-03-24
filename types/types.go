@@ -25,6 +25,12 @@ type DetailedPerson struct {
 	Vehicle       VehicleRecord
 }
 
+type ConsistentPerson struct {
+	Person
+	State string
+	LGA   string
+}
+
 type BankAccount struct {
 	BankName      string
 	BankCode      string
