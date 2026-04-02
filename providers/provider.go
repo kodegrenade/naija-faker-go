@@ -59,6 +59,10 @@ type AddressesData struct {
 }
 
 type BanksData struct {
+	Banks []Bank `json:"banks"`
+}
+
+type Bank struct {
 	Name string `json:"name"`
 	Code string `json:"code"`
 }
@@ -122,7 +126,7 @@ type PlatesData struct {
 
 type SalariesData struct {
 	SalaryBands map[string]SalaryBand `json:"salaryBands"`
-	Levels      []string                `json:"levels"`
+	Levels      []string              `json:"levels"`
 }
 
 type SalaryBand struct {
