@@ -91,3 +91,7 @@ type University struct {
 	State        string
 	Type         string
 }
+
+type LicensePlate struct {
+	Plate string
+}
