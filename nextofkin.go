@@ -10,6 +10,7 @@ var relationshipTitles = map[string][]string{
 	"female": {"Mother", "Sister", "Spouse", "Aunt", "Daughter", "Friend"},
 }
 
+// NextOfKin generates a next of kin record.
 func (f *Faker) NextOfKin(lang, gender string) (types.NextOfKin, error) {
 	lang = f.resolveLanguage(lang)
 	gender = f.resolveGender(gender)
